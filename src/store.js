@@ -10,7 +10,7 @@ const addItem = function (item) {
 };
 
 const findAndUpdate = function (id, newData) {
-  let foundItem = findById(id);
+  const foundItem = this.findById(id);
   Object.assign(foundItem, newData);
 };
 
