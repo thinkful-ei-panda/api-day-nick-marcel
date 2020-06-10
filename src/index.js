@@ -4,11 +4,12 @@ import 'normalize.css';
 import './index.css';
 
 import shoppingList from './shopping-list';
+import api from './api';
 
 const main = function () {
-  fetch('https://thinkful-list-api.herokuapp.com/ei-student/items')
-    .then(res => res.json())
-    .then(data => console.log(data));
+  api.getItems()
+    .then(res => console.log(res));
+
   shoppingList.bindEventListeners();
   shoppingList.render();
 };
